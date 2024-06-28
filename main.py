@@ -10,10 +10,14 @@ root.geometry ("300x300+50+50")
 root.config (bg = "#404043")
 root.eval ('tk::PlaceWindow . center')
 
-link = Label (root, text = "Link eingeben", bg = "#ffffff", fg = "black")
-link.pack(ipady = 20)
-link.config (font = ("Font", 20), height = 1, width = 19)
-link.place (relx = 0.5, rely = 0.5, anchor = CENTER)
+textEingabe = Text (master = root, height = 1, width = 19)
+
+textEingabe.place(relx = 0.5, rely = 0.5, anchor = CENTER)
+
+#link = Label (root, text = "Link eingeben", bg = "#ffffff", fg = "black")
+#link.pack(ipady = 20)
+#link.config (font = ("Font", 20), height = 1, width = 19)
+#link.place (relx = 0.5, rely = 0.5, anchor = CENTER)
 
 link_frame = Frame(root, bg = "#6FAFE7")
 link_frame.pack()
