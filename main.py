@@ -1,3 +1,4 @@
+import tkinter
 from tkinter import *
 
 
@@ -10,13 +11,17 @@ root.config (bg = "#404043")
 
 link = Label (root, text = "Link eingeben", bg = "#ffffff", fg = "black")
 link.pack(ipady = 20)
-link.config (font = ("Font", 10), height = 1, width = 25)
-
-can = Canvas (root, bg = "red", height = 50, width = 50)
-can.place (x = 100, y = 100, anchor = NW)
+link.config (font = ("Font", 20), height = 1, width = 19)
+link.place (relx = 0.5, rely = 0.5, anchor = CENTER)
 
 link_frame = Frame(root, bg = "#6FAFE7")
 link_frame.pack()
-Label (link_frame, text = "Herunterladen", bg ="#ffffff").pack (side = "left", padx = 0)
+Label (link_frame, text = "Herunterladen", bg ="#ffffff", fg = "black").pack (side = "left", padx = 0)
+link_frame.place (relx = 0.5, rely = 0.6, anchor = CENTER)
+
+checkBox = tkinter.Checkbutton (text = "MP3")
+checkBox.pack()
+checkBox.place (relx = 0.5, rely = 0.4, anchor = CENTER)
+
 
 root.mainloop()
