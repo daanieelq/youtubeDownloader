@@ -4,6 +4,17 @@ from pytube import YouTube
 import os
 import ffmpeg
 
+
+def center_window(window):
+    window.update_idletasks()
+    screen_width = window.winfo_screenwidth()
+    screen_height = window.winfo_screenheight()
+    window_width = window.winfo_width()
+    window_height = window.winfo_height()
+    x = (screen_width // 2) - (window_width // 2)
+    y = (screen_height // 2) - (window_height // 2)
+    window.geometry(f'{window_width}x{window_height}+{x}+{y}')
+
 def clear_text(event):
     textEingabe.delete("1.0", tk.END)
 
@@ -81,4 +92,5 @@ checkBox = tk.Checkbutton(root, text="MP3", variable=var1)
 checkBox.pack()
 checkBox.place(relx=0.5, rely=0.4, anchor=tk.CENTER)
 
+center_window(root)
 root.mainloop()
